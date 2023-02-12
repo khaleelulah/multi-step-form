@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: all .2s ease;
+    outline: none;
+}
+
+
+/* .step1input:not(:placeholder-shown)~.next-btn-con {
+        opacity: 1;
+    } */
+
+
+/*     
+    #step1 {
+        display: block;
+    } */
+
+
+/* #firststep {
+        background-color: green;
+    } */
+
+#step2,
+#step3,
+#step4,
+#step5 {
+    width: 100%;
+    /* display: none; */
+    padding: 40px 70px 10px 70px;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    background-color: white;
+    left: 0;
+}
+
+
+/* #btn-paragraph { */
+
+
+/* display: none; */
+
+
+/* } */
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(./assets/fonts/Ubuntu-Regular.ttf);
+    /* font-style: normal;
+        font-weight: 600; */
+}
+
+body {
+    font-family: Ubuntu;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(206, 94%, 87%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 55%;
+    height: 70%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    background-color: white;
+    /* justify-content: ; */
+    border-radius: 5px;
+}
+
+.menu-bar {
+    width: 30%;
+    border-radius: 5px;
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.list {
+    margin: 40px 0 0 30px;
+}
+
+.list-item {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.list-item span {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.list-item span:hover {
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+
+.list-content {
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: hsl(231, 11%, 63%);
+    font-size: 12px;
+}
+
+.list-content p {
+    color: white;
+    margin: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details {
+    width: 70%;
+    padding: 40px 70px 10px 70px;
+    position: relative;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.step1,
+.step2,
+.step3,
+.step4 {
+    /* margin: 40px 100px 0 100px; */
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.personal-info {
+    position: relative;
+}
+
+.personal-info>p {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 45px;
+}
+
+form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 11%, 63%);
+    font-size: 16px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.next-btn-con {
+    /* position: absolute; */
+    /* right: 70px; */
+    /* bottom: 10px; */
+    align-items: center;
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+}
+
+
+/* step2 */
+
+.yearly-price {
+    display: none;
+}
+
+.yearly .selector {
+    justify-content: end;
+}
+
+.yearly .monthly-price {
+    display: none;
+}
+
+.yearly .yearly-price {
+    display: block;
+}
+
+.subscription .year {
+    color: hsl(228, 100%, 84%);
+}
+
+.subscription .month {
+    color: hsl(213, 96%, 18%);
+}
+
+.yearly .year {
+    color: hsl(213, 96%, 18%);
+}
+
+.yearly .month {
+    color: hsl(228, 100%, 84%);
+}
+
+.selector {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    display: flex;
+    background-color: hsl(213, 96%, 18%);
+    align-items: center;
+    justify-items: start;
+}
+
+.selector span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hsl(217, 100%, 97%);
+}
+
+.grid {
+    display: grid;
+    /* height: ; */
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.grid-content {
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.grid-content p {
+    margin-top: 5px;
+}
+
+.grid-content:hover {
+    background-color: hsl(229, 24%, 87%);
+}
+
+.activegrid {
+    border: 2px solid hsl(243, 100%, 62%);
+}
+
+.step2 h6 {
+    margin-top: 45px;
+}
+
+
+/* .step2 p {
+        margin-top: 0;
+    } */
+
+.subscription {
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: hsl(231, 100%, 99%);
+}
+
+.subscription h4 {
+    display: inline;
+}
+
+.step2 .next-btn-con {
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(231, 11%, 63%);
+}
+
+.next-btn-con p {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.next-btn-con p:hover {
+    color: hsl(213, 96%, 18%);
+}
+
+.step3-content {
+    margin-top: 20px;
+}
+
+.step3 p {
+    margin-top: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid green;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 18px 30px;
+}
+
+.checkbox-container input {
+    width: 20px;
+    height: 30px;
+    accent-color: hsl(243, 100%, 62%);
+}
+
+input[type="checkbox"]:checked .checkbox-container {
+    border-color: red;
+}
+
+.checkbox-container .checkbox-text {
+    width: 60%;
+    text-align: start;
+}
+
+.checkbox-container span {
+    width: 20%;
+}
+
+.step5 {
+    height: 100%;
+}
+
+.step5-content {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+}
+
+.step5 p {
+    margin-top: 10px;
+}
