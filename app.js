@@ -14,14 +14,11 @@ let firstStep = document.getElementById("firststep")
 let secondStep = document.getElementById("secondstep")
 let thirdStep = document.getElementById("thirdstep")
 let fourthStep = document.getElementById("fourthstep")
-let gridContent1 = document.querySelector("#grid-content1")
-let gridContent2 = document.querySelector("#grid-content2")
-let gridContent3 = document.querySelector("#grid-content3")
 
 let username = document.getElementById("username");
 let email = document.getElementById("email");
 let phonenumber = document.getElementById("number");
-
+/*
 step1.addEventListener("submit", e => {
     e.preventDefault();
     ValidateInputs();
@@ -80,7 +77,9 @@ const ValidateInputs = () => {
 }
 const isValidEmail = email => {
 
-}
+}*/
+
+/*
 nextbutton2.addEventListener("click", () => {
     step2.style.transform = "translateX(100%)"
     step3.style.transform = "translateX(0)"
@@ -113,12 +112,7 @@ previousbtn4.addEventListener("click", () => {
     step4.style.transform = "translateX(100%)"
     step3.style.transform = "translateX(0)"
 })
-var body = document.querySelector("body")
-var selector = document.querySelector(".selector")
 
-selector.addEventListener("click", () => {
-    body.classList.toggle("yearly");
-})
 
 gridContent1.addEventListener("click", () => {
     gridContent1.classList.toggle("activegrid");
@@ -138,4 +132,81 @@ var change = document.querySelector(".change")
 change.addEventListener("click", () => {
     step2.style.transform = "translateX(0)"
     step4.style.transform = "translateX(100%)"
+})*/
+
+
+
+
+const slidePage = document.querySelector(".slidepage");
+const firstNextBtn = document.querySelector(".nextBtn");
+const PrevBtnSec = document.querySelector(".prev-1");
+const NextBtnSec = document.querySelector(".next-1");
+const PrevBtnThird = document.querySelector(".prev-2");
+const NextBtnThird = document.querySelector(".next-2");
+const PrevBtnFourth = document.querySelector(".prev-3");
+const NextBtnFourth = document.querySelector(".next-3");
+
+
+firstNextBtn.addEventListener("click", function() {
+    slidePage.style.marginLeft = "-25%";
+})
+
+NextBtnSec.addEventListener("click", function() {
+    slidePage.style.marginLeft = "-50%";
+})
+
+NextBtnThird.addEventListener("click", function() {
+    slidePage.style.marginLeft = "-75%";
+})
+
+PrevBtnSec.addEventListener("click", function() {
+    slidePage.style.marginLeft = "0%";
+})
+
+PrevBtnThird.addEventListener("click", function() {
+    slidePage.style.marginLeft = "-25%";
+})
+
+PrevBtnFourth.addEventListener("click", function() {
+    slidePage.style.marginLeft = "-50%";
+})
+
+
+
+
+
+// var subscriptionPage = document.querySelector(".step2")
+var selector = document.querySelector(".selector")
+
+selector.addEventListener("click", () => {
+    step2.classList.toggle("yearly");
+})
+
+
+
+
+gridContainer = document.querySelector(".grid")
+let gridContent1 = document.querySelector("#grid-content1")
+let gridContent2 = document.querySelector("#grid-content2")
+let gridContent3 = document.querySelector("#grid-content3")
+
+gridContent1.addEventListener("click", () => {
+    gridContainer.classList.add("grid-1")
+    gridContainer.classList.remove("grid-2")
+    gridContainer.classList.remove("grid-3")
+})
+
+
+gridContent2.addEventListener("click", () => {
+    gridContainer.classList.add("grid-2")
+    gridContainer.classList.remove("grid-1")
+    gridContainer.classList.remove("grid-3")
+})
+
+
+gridContent3.addEventListener("click", () => {
+    gridContainer.classList.add("grid-3");
+    gridContainer.classList.remove("grid-2");
+    gridContainer.classList.remove("grid-1");
+
 })

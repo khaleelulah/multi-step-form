@@ -12,49 +12,24 @@
 }
 
 
-/* .step1input:not(:placeholder-shown)~.next-btn-con {
-        opacity: 1;
-    } */
-
-
-/*     
-    #step1 {
-        display: block;
-    } */
-
-
-/* #firststep {
-        background-color: green;
-    } */
-
+/* 
 #step2,
 #step3,
 #step4,
 #step5 {
     width: 100%;
-    /* display: none; */
+    display: none;
     padding: 40px 70px 10px 70px;
     transform: translateX(100%);
     position: absolute;
     top: 0;
     background-color: white;
     left: 0;
-}
-
-
-/* #btn-paragraph { */
-
-
-/* display: none; */
-
-
-/* } */
+} */
 
 @font-face {
     font-family: Ubuntu;
     src: url(./assets/fonts/Ubuntu-Regular.ttf);
-    /* font-style: normal;
-        font-weight: 600; */
 }
 
 body {
@@ -71,7 +46,7 @@ main {
     width: 55%;
     height: 70%;
     margin: auto;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     background-color: white;
     /* justify-content: ; */
@@ -134,8 +109,10 @@ h5 {
 
 .details {
     width: 70%;
-    padding: 40px 70px 10px 70px;
-    position: relative;
+    padding: 40px 70px;
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* display: flex; */
 }
 
 h1 {
@@ -146,18 +123,19 @@ h1 {
 .step2,
 .step3,
 .step4 {
-    /* margin: 40px 100px 0 100px; */
     display: flex;
     height: 100%;
     justify-content: space-between;
     flex-direction: column;
+    width: 25%;
 }
 
-.personal-info {
-    position: relative;
+.container {
+    /* width: 100%; */
+    /* position: relative; */
 }
 
-.personal-info>p {
+.container>p {
     margin-top: 20px;
 }
 
@@ -194,17 +172,17 @@ form input {
 }
 
 .next-btn-con {
-    /* position: absolute; */
-    /* right: 70px; */
-    /* bottom: 10px; */
+    /* margin-top: 30px; */
     align-items: center;
     width: 100%;
-    /* margin: auto; */
     display: flex;
+    /* align-self: flex-end; */
     justify-content: space-between;
 }
 
-button {
+button,
+.nextBtn {
+    display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
@@ -388,4 +366,25 @@ input[type="checkbox"]:checked .checkbox-container {
 
 .step5 p {
     margin-top: 10px;
+}
+
+.steps-container {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.grid-1>#grid-content1 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.grid-2>#grid-content2 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.grid-3>#grid-content3 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
 }
