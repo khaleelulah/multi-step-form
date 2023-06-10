@@ -11,36 +11,7 @@
     <title>Frontend Mentor | Multi-step form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-        
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-        
-        .step-4con {
-            background-color: grey;
-            padding: 20px;
-        }
-        
-        .flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .border-top {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            border-top: 1px solid yellow;
-            margin-top: 30px;
-            padding: 20px 0;
-        }
-    </style> -->
+
 </head>
 
 <body>
@@ -210,22 +181,23 @@
                             <p> Double-check everything looks OK before confirming.</p>
                             <div class="step4-content">
                                 <div class="step-4con">
-                                    <div class="flex">
+                                    <div class="outlines">
                                         <div class="">
-                                            <h5>Arcade</h5>
+                                            <h5 class="step1selected">Arcade</h5>
                                             <a href="#" class="change">change</a>
                                         </div>
                                         <div class="">
-                                            <span>$9/mo</span>
+                                            <span class="step1price">$9/mo</span>
                                         </div>
+
                                     </div>
-                                    <div class="border-top">
-                                        <div class="flex"><span>Online Service</span> <span></span></div>
-                                        <div class="flex"><span>Larger Storage</span> <span></span></div>
+                                    <div class="features">
+                                        <div><span>Online Service</span> <span>+1$/mo</span></div>
+                                        <div><span>Larger Storage</span> <span>+2$/mo</span></div>
                                     </div>
 
                                 </div>
-                                <div class="flex">
+                                <div class="total">
                                     <span>Total ( <span>per month</span> )</span>
                                     <span>$12/mo</span>
                                 </div>
@@ -238,7 +210,7 @@
 
                         <div class="next-btn-con">
                             <p class="prev-3">Go Back</p>
-                            <button class="next-3">Next Step</button>
+                            <button class="next-3">Confirm</button>
                         </div>
                     </div>
                     <!-- 

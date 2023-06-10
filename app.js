@@ -185,6 +185,11 @@ selector.addEventListener("click", () => {
 
 
 
+
+
+let step1SelectedOption = document.querySelector(".step1selected")
+let step1Price = document.querySelector(".step1price")
+
 gridContainer = document.querySelector(".grid")
 let gridContent1 = document.querySelector("#grid-content1")
 let gridContent2 = document.querySelector("#grid-content2")
@@ -194,6 +199,9 @@ gridContent1.addEventListener("click", () => {
     gridContainer.classList.add("grid-1")
     gridContainer.classList.remove("grid-2")
     gridContainer.classList.remove("grid-3")
+
+    step1SelectedOption.textContent = "Arcade"
+    step1Price.textContent = "$9/mo"
 })
 
 
@@ -201,6 +209,8 @@ gridContent2.addEventListener("click", () => {
     gridContainer.classList.add("grid-2")
     gridContainer.classList.remove("grid-1")
     gridContainer.classList.remove("grid-3")
+    step1SelectedOption.textContent = "Advanced";
+    step1Price.textContent = "$12/mo"
 })
 
 
@@ -209,4 +219,6 @@ gridContent3.addEventListener("click", () => {
     gridContainer.classList.remove("grid-2");
     gridContainer.classList.remove("grid-1");
 
+    step1SelectedOption.textContent = "Pro"
+    step1Price.textContent = "$15/mo"
 })
