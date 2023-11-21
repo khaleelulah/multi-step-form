@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+
 
 
     <link rel="stylesheet" href="styles.css">
     <title>Frontend Mentor | Multi-step form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 
 <body>
 
-    <main>
-        <div class="menu-bar">
+
+    <div class="container">
+        <div class="navbg">
+        </div>
+        <div class="sidebar">
             <div class="list">
                 <div class="list-item">
                     <span id="firststep">1</span>
@@ -50,11 +51,11 @@
 
             </div>
         </div>
-        <div class="details">
+        <div class="main-content">
             <div style="width: 100%; height: 100%;">
                 <div class="steps-container ">
                     <div class="step1 slidepage" id="step1">
-                        <div class="container">
+                        <div class="inner-container">
                             <h1>Personal info</h1>
                             <p> Please provide your name, email address, and phone number.</p>
 
@@ -80,13 +81,13 @@
 
                         </div>
                         <div class="next-btn-con">
-                            <!-- <button id="step1nextbutton" type="submit">Next Step</button> -->
+
                             <div class="nextBtn">Next Step</div>
                         </div>
                     </div>
 
                     <div class="step2 " id="step2">
-                        <div class="container">
+                        <div class="inner-container">
                             <h1>Select your plan</h1>
                             <p> You have the option of monthly or yearly billing.</p>
                             <div class="grid grid-1">
@@ -132,19 +133,19 @@
                     </div>
 
                     <div class="step3 " id="step3">
-                        <div class="container">
+                        <div class="inner-container">
                             <h1>Pick add-ons</h1>
                             <p> Add-ons help enhance your gaming experience.</p>
                             <div class="step3-content">
-                                <div class="checkbox-container">
-                                    <input type="checkbox">
+                                <label for="online" class="checkbox-container">
+                                    <input type="checkbox" id="online" name="online">
                                     <div class="checkbox-text">
                                         <h6>Online Service </h6>
                                         <p>Access to Multiplayer Games</p>
                                     </div>
                                     <span class="monthly-price"> +$1/mo</span>
                                     <span class="yearly-price"> +$10/yr</span>
-                                </div>
+                                </label>
                                 <div class="checkbox-container">
                                     <input type="checkbox">
                                     <div class="checkbox-text">
@@ -176,7 +177,7 @@
 
                     </div>
                     <div class="step4 " id="step4">
-                        <div class="container">
+                        <div class="inner-container">
                             <h1>Finishing up</h1>
                             <p> Double-check everything looks OK before confirming.</p>
                             <div class="step4-content">
@@ -213,8 +214,8 @@
                             <button class="next-3">Confirm</button>
                         </div>
                     </div>
-                    <!-- 
-                    <div class="step5 " id="step5">
+
+                    <!-- <div class="step5 " id="step5">
                         <div class="step5-content">
                             <div><img src="./assets/images/icon-thank-you.svg" alt="">
                                 <h2>Thank You</h2>
@@ -228,49 +229,10 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+
     <script src="app.js"></script>
 
 </body>
 
 </html>
-
-<!-- Sidebar end -->
-
-<!-- Step 1 start -->
-
-<!--  Name  Email Address  Phone Number  Step -->
-
-<!-- Step 1 end -->
-
-<!-- Step 2 start -->
-
-<!--$15/mo  Next Step -->
-
-<!-- Step 2 end -->
-
-<!-- Step 3 start -->
-
-<!--  Go Back Next Step -->
-
-<!-- Step 3 end -->
-
-<!-- Step 4 start -->
-
-<!--  -->
-
-<!-- Dynamically add subscription and add-on selections here -->
-
-<!-- Total (per month/year) Go Back Confirm -->
-
-<!-- Step 4 end -->
-
-<!-- Step 5 start -->
-
-<!--   -->
-
-<!-- Step 5 end -->
-<!-- 
-<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-</div> -->

@@ -18,6 +18,21 @@ let fourthStep = document.getElementById("fourthstep")
 let username = document.getElementById("username");
 let email = document.getElementById("email");
 let phonenumber = document.getElementById("number");
+
+// let checkbox1 = document.getElementById("online")
+
+// function check(element) {
+//     const parts = element.parentElement;
+//     if (checkbox1 == true) {
+//         parts.style.background = "red";
+//     } else {
+//         parts.style.background = "yellow";
+//     }
+// }
+// checkbox1.addEventListener("checked",(e)=>{
+
+// })
+// 
 /*
 step1.addEventListener("submit", e => {
     e.preventDefault();
@@ -78,61 +93,6 @@ const ValidateInputs = () => {
 const isValidEmail = email => {
 
 }*/
-
-/*
-nextbutton2.addEventListener("click", () => {
-    step2.style.transform = "translateX(100%)"
-    step3.style.transform = "translateX(0)"
-
-})
-
-nextbutton3.addEventListener("click", () => {
-    step3.style.transform = "translateX(100%)"
-    step4.style.transform = "translateX(0)"
-
-})
-
-nextbutton4.addEventListener("click", () => {
-    step4.style.transform = "translateX(100%)"
-    step5.style.transform = "translateX(0)"
-
-})
-
-previousbtn2.addEventListener("click", () => {
-    step2.style.transform = "translateX(100%)"
-    step1.style.transform = "translateX(0)"
-})
-
-previousbtn3.addEventListener("click", () => {
-    step3.style.transform = "translateX(100%)"
-    step2.style.transform = "translateX(0)"
-})
-
-previousbtn4.addEventListener("click", () => {
-    step4.style.transform = "translateX(100%)"
-    step3.style.transform = "translateX(0)"
-})
-
-
-gridContent1.addEventListener("click", () => {
-    gridContent1.classList.toggle("activegrid");
-})
-
-gridContent2.addEventListener("click", () => {
-    gridContent2.classList.toggle("activegrid")
-})
-
-gridContent3.addEventListener("click", () => {
-    gridContent3.classList.toggle("activegrid")
-})
-
-
-var change = document.querySelector(".change")
-
-change.addEventListener("click", () => {
-    step2.style.transform = "translateX(0)"
-    step4.style.transform = "translateX(100%)"
-})*/
 
 
 
