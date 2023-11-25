@@ -1,460 +1,505 @@
- * {
-     margin: 0;
-     padding: 0;
-     list-style-type: none;
-     list-style: none;
-     text-decoration: none;
-     font-size: 16px;
-     box-sizing: border-box;
-     overflow-x: hidden;
-     transition: all .2s ease;
-     outline: none;
- }
- 
- @font-face {
-     font-family: Ubuntu;
-     src: url(./assets/fonts/Ubuntu-Regular.ttf);
- }
- 
- body {
-     font-family: Ubuntu;
-     width: 100vw;
-     height: 100vh;
-     background-color: hsl(206, 94%, 87%);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     position: relative;
- }
- 
- .container {
-     width: 60%;
-     position: relative;
-     margin: auto;
-     border-radius: 5px;
-     display: flex;
-     background-color: white;
-     justify-content: space-between;
- }
- 
- .navbg {
-     position: absolute;
-     width: 25%;
-     left: 10px;
-     /* z-index: 1; */
-     top: 10px;
-     bottom: 10px;
-     background: url(./assets/images/bg-sidebar-desktop.svg);
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
-     height: calc(100% - 20px);
-     border-radius: 5px;
-     content: "";
- }
- 
- .sidebar {
-     width: 30%;
-     height: 100%;
-     position: relative;
-     z-index: 3;
- }
- 
- .list {
-     margin: 40px 0 0 30px;
- }
- 
- .list-item {
-     display: flex;
-     margin-bottom: 20px;
-     align-items: center;
- }
- 
- .list-item span {
-     border-radius: 50%;
-     width: 30px;
-     height: 30px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     border: 1px solid white;
-     color: white;
-     cursor: pointer;
- }
- 
- .list-item span:hover {
-     background-color: hsl(206, 94%, 87%);
-     color: black;
- }
- 
- .list-content {
-     margin-left: 15px;
-     text-transform: uppercase;
- }
- 
- h5 {
-     color: hsl(231, 11%, 63%);
-     font-size: 12px;
- }
- 
- .list-content p {
-     color: white;
-     margin: 2px 2px 2px 0;
-     letter-spacing: 1px;
-     font-size: 14px;
-     font-weight: 600;
- }
- 
- .main-content {
-     width: 70%;
-     padding: 20px 50px 20px 30px;
- }
- 
- h1 {
-     font-size: 32px;
- }
- 
- .step1,
- .step2,
- .step3,
- .step4 {
-     display: flex;
-     height: 100%;
-     justify-content: space-between;
-     flex-direction: column;
-     width: 25%;
- }
- 
- .inner-container>p {
-     margin-top: 10px;
- }
- 
- form {
-     margin-top: 20px;
- }
- 
- form input {
-     width: 100%;
-     margin: 10px 0;
-     padding: 10px;
-     border-radius: 5px;
-     border: 1px solid hsl(231, 11%, 63%);
-     font-size: 16px;
- }
- 
- .input-control {
-     display: flex;
-     flex-direction: column;
- }
- 
- .input-control.success input {
-     border-color: #09c372;
- }
- 
- .input-control.error input {
-     border-color: #ff3860;
- }
- 
- .input-control .error {
-     color: #ff3860;
-     font-size: 9px;
-     height: 13px;
- }
- 
- .next-btn-con {
-     align-items: center;
-     width: 100%;
-     display: flex;
-     margin-top: 15px;
-     justify-content: space-between;
- }
- 
- button,
- .nextBtn {
-     display: inline-block;
-     padding: 10px 15px;
-     cursor: pointer;
-     border-radius: 5px;
-     color: white;
-     background-color: hsl(213, 96%, 18%);
- }
- 
- .yearly-price {
-     display: none;
- }
- 
- .yearly .selector {
-     justify-content: end;
- }
- 
- .yearly .monthly-price {
-     display: none;
- }
- 
- .yearly .yearly-price {
-     display: block;
- }
- 
- .subscription .year {
-     color: hsl(228, 100%, 84%);
- }
- 
- .subscription .month {
-     color: hsl(213, 96%, 18%);
- }
- 
- .yearly .year {
-     color: hsl(213, 96%, 18%);
- }
- 
- .yearly .month {
-     color: hsl(228, 100%, 84%);
- }
- 
- .selector {
-     cursor: pointer;
-     width: 40px;
-     height: 20px;
-     padding: 0 5px;
-     border-radius: 10px;
-     display: flex;
-     background-color: hsl(213, 96%, 18%);
-     align-items: center;
-     justify-items: start;
- }
- 
- .selector span {
-     width: 12px;
-     height: 12px;
-     border-radius: 50%;
-     background-color: hsl(217, 100%, 97%);
- }
- 
- .grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     margin-top: 40px;
-     gap: 20px;
- }
- 
- .grid-content {
-     border: 1px solid hsl(231, 11%, 63%);
-     padding: 15px;
-     border-radius: 10px;
-     cursor: pointer;
- }
- 
- .grid-content p {
-     margin-top: 5px;
- }
- 
- .grid-content:hover {
-     background-color: hsl(229, 24%, 87%);
- }
- 
- .activegrid {
-     border: 2px solid hsl(243, 100%, 62%);
- }
- 
- .step2 h6 {
-     margin-top: 45px;
- }
- 
- .subscription {
-     width: 100%;
-     padding: 15px;
-     justify-content: center;
-     gap: 20px;
-     border-radius: 5px;
-     display: flex;
-     align-items: center;
-     margin-top: 20px;
-     background-color: whitesmoke;
- }
- 
- .subscription h4 {
-     display: inline;
- }
- 
- .step2 .next-btn-con {
-     justify-content: space-between;
-     align-items: center;
-     color: hsl(231, 11%, 63%);
- }
- 
- .next-btn-con p {
-     cursor: pointer;
-     font-size: 17px;
-     font-weight: 700;
- }
- 
- .next-btn-con p:hover {
-     color: hsl(213, 96%, 18%);
- }
- 
- .step3-content {
-     margin-top: 20px;
- }
- 
- .step3 p {
-     margin-top: 5px;
- }
- 
- .checkbox-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     border: 1px solid hsl(231, 11%, 63%);
-     margin-top: 20px;
-     border-radius: 8px;
-     padding: 18px 30px;
- }
- 
- .checkbox-container input {
-     width: 20px;
-     height: 30px;
-     accent-color: hsl(243, 100%, 62%);
- }
- 
- input[type="checkbox"]:checked+label {
-     border-color: red;
- }
- 
- .checkbox-container .checkbox-text {
-     width: 60%;
-     text-align: start;
- }
- 
- .checkbox-container span {
-     width: 20%;
- }
- 
- .step5 {
-     height: 100%;
- }
- 
- .step5-content {
-     text-align: center;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     gap: 30px;
-     align-items: center;
-     justify-content: center;
- }
- 
- .step5 p {
-     margin-top: 10px;
- }
- 
- .steps-container {
-     display: flex;
-     width: 400%;
-     height: 100%;
- }
- 
- .grid-1>#grid-content1 {
-     background-color: hsl(229, 24%, 87%);
-     border: 1px solid hsl(243, 100%, 62%);
- }
- 
- .grid-2>#grid-content2 {
-     background-color: hsl(229, 24%, 87%);
-     border: 1px solid hsl(243, 100%, 62%);
- }
- 
- .grid-3>#grid-content3 {
-     background-color: hsl(229, 24%, 87%);
-     border: 1px solid hsl(243, 100%, 62%);
- }
- 
- .step4-content {
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     margin-top: 20px;
- }
- 
- .step-4con {
-     border-radius: 10px;
-     background-color: hsl(229, 24%, 87%);
-     padding: 10px;
- }
- /* h5 {
-     font-size: 16px;
-     color: hsl(243, 100%, 62%);
- } */
- 
- .outlines {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding-bottom: 20px;
-     border-bottom: 1px solid hsl(231, 11%, 63%);
- }
- 
- .outlines a {
-     font-size: 14px;
-     margin-top: 10px;
- }
- 
- .features {
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     padding: 20px 0;
- }
- 
- .features>* {
-     display: flex;
-     justify-content: space-between;
- }
- 
- .features span {
-     font-size: 14px;
-     font-weight: 400;
-     color: hsl(231, 11%, 63%);
- }
- 
- .total {
-     display: flex;
-     justify-content: space-between;
- }
- 
- @media (max-width:375px) {
-     .container {
-         width: 100%;
-         flex-direction: column;
-         padding-top: 30px;
-         background: transparent;
-         /* z-index: 10; */
-     }
-     .navbg {
-         /* z-index: -1; */
-         width: 100%;
-         height: 22%;
-         top: 0;
-         left: 0;
-         right: 0;
-         background: url(./assets/images/bg-sidebar-mobile.svg);
-     }
-     .sidebar {
-         width: 100%;
-     }
-     .main-content {
-         background-color: white;
-         width: 90%;
-         margin: auto;
-         border-radius: 10px;
-         z-index: 10;
-     }
-     .list {
-         width: 60%;
-         margin: auto;
-         display: flex;
-         justify-content: space-between;
-     }
-     .list-content {
-         display: none;
-     }
- }
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: all .2s ease;
+    outline: none;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+
+body {
+    font-family: Ubuntu;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(206, 94%, 87%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 60%;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.navbg {
+    position: absolute;
+    width: 25%;
+    left: 10px;
+    /* z-index: 1; */
+    top: 10px;
+    bottom: 10px;
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100% - 20px);
+    border-radius: 5px;
+    content: "";
+}
+
+.sidebar {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.list {
+    margin: 40px 0 0 30px;
+}
+
+.list-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.list-item span {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.list-item span:hover {
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+
+.list-content {
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: hsl(231, 11%, 63%);
+    font-size: 12px;
+}
+
+.list-content p {
+    color: white;
+    margin: 2px 2px 2px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px 50px 20px 30px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.step1,
+.step2,
+.step3,
+.step4 {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 25%;
+}
+
+.inner-container>p {
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 11%, 63%);
+    font-size: 16px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.next-btn-con {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+button,
+.nextBtn {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+}
+
+.yearly-price {
+    display: none;
+}
+
+.yearly .selector {
+    justify-content: end;
+}
+
+.yearly .monthly-price {
+    display: none;
+}
+
+.yearly .yearly-price {
+    display: block;
+}
+
+.subscription .year {
+    color: hsl(228, 100%, 84%);
+}
+
+.subscription .month {
+    color: hsl(213, 96%, 18%);
+}
+
+.yearly .year {
+    color: hsl(213, 96%, 18%);
+}
+
+.yearly .month {
+    color: hsl(228, 100%, 84%);
+}
+
+.selector {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    display: flex;
+    background-color: hsl(213, 96%, 18%);
+    align-items: center;
+    justify-items: start;
+}
+
+.selector span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hsl(217, 100%, 97%);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.grid-content {
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.grid-content p {
+    margin-top: 5px;
+}
+
+.grid-content:hover {
+    background-color: hsl(229, 24%, 87%);
+}
+
+.activegrid {
+    border: 2px solid hsl(243, 100%, 62%);
+}
+
+.step2 h6 {
+    margin-top: 45px;
+}
+
+.subscription {
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+
+.subscription h4 {
+    display: inline;
+}
+
+.step2 .next-btn-con {
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(231, 11%, 63%);
+}
+
+.next-btn-con p {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.next-btn-con p:hover {
+    color: hsl(213, 96%, 18%);
+}
+
+.step3-content {
+    margin-top: 20px;
+}
+
+.step3 p {
+    margin-top: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid hsl(231, 11%, 63%);
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 18px 30px;
+}
+
+.checkbox-container input {
+    width: 20px;
+    height: 30px;
+    accent-color: hsl(243, 100%, 62%);
+}
+
+input[type="checkbox"]:checked+label {
+    border-color: red;
+}
+
+.checkbox-container .checkbox-text {
+    width: 60%;
+    text-align: start;
+}
+
+.checkbox-container span {
+    width: 20%;
+}
+
+.step5 {
+    height: 100%;
+}
+
+.step5-content {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.step5 p {
+    margin-top: 10px;
+}
+
+.steps-container {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.grid-1>#grid-content1 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.grid-2>#grid-content2 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.grid-3>#grid-content3 {
+    background-color: hsl(229, 24%, 87%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.step4-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step-4con {
+    border-radius: 10px;
+    background-color: hsl(229, 24%, 87%);
+    padding: 10px;
+}
+
+
+/* h5 {
+    font-size: 16px;
+    color: hsl(243, 100%, 62%);
+} */
+
+.outlines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(231, 11%, 63%);
+}
+
+.outlines a {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.features>* {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features span {
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:375px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 12%;
+        background: transparent;
+        /* z-index: 10; */
+    }
+    .navbg {
+        /* z-index: -1; */
+        width: 100%;
+        height: 22%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: url(./assets/images/bg-sidebar-mobile.svg);
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .main-content {
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        z-index: 10;
+        padding: 20px 30px 20px 30px;
+    }
+    /* .step1,
+    .step2,
+    .step3,
+    .step4,
+    .step5 { */
+    .steps-container {
+        position: relative;
+    }
+    .next-btn-con {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+    }
+    .list {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .list-content {
+        display: none;
+    }
+    .step3-content {
+        margin-top: 0;
+    }
+    .checkbox-container {
+        padding: 15px;
+    }
+    .checkbox-text p {
+        font-size: 13px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    .checkbox-container span {
+        font-size: 13px;
+    }
+    .grid {
+        margin-top: 15px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .step2 h6 {
+        margin-top: 0;
+    }
+}
